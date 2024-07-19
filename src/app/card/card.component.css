@@ -1,0 +1,21 @@
+mat-card {
+    background-color: #df8383; /* Light grey background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; 
+    height: 300px;
+    width: 300px;
+    
+}
+mat-card-title{
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #333;
+}
+mat-card-actions {
+    display: flex; /* Flex layout for buttons */
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 3px; /* Space between buttons */
+  }

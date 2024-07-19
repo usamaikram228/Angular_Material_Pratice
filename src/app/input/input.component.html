@@ -1,0 +1,11 @@
+<p>input works!</p>
+<form [formGroup]="registrationForm"> 
+    {{registrationForm.value| json}}
+    <mat-form-field>
+        <mat-label>UserName</mat-label>
+        <input matInput [class.is-valid]="registrationForm.get('userName')?.valid" formControlName="userName" type="text">
+       
+    </mat-form-field>
+    {{registrationForm.get('userName')?.valid}}
+</form>
+
