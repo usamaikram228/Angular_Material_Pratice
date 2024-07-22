@@ -16,6 +16,14 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatTableModule } from '@angular/material/table';
 
 
 
@@ -27,7 +35,8 @@ const MaterialComponents=[
   MatProgressSpinnerModule,
   MatToolbarModule,
   MatSidenavModule,MatMenuModule,MatListModule,MatGridListModule,MatExpansionModule,MatCardModule,MatTabsModule,
-  MatStepperModule,MatFormFieldModule,MatInputModule
+  MatStepperModule,MatFormFieldModule,MatInputModule,MatSelectModule,MatAutocompleteModule,MatDatepickerModule,
+  MatNativeDateModule,MatTooltipModule,MatSnackBarModule,MatDialogModule,MatTableModule
 ]
 
 
