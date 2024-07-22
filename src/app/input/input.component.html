@@ -4,8 +4,42 @@
     <mat-form-field>
         <mat-label>UserName</mat-label>
         <input matInput [class.is-valid]="registrationForm.get('userName')?.valid" formControlName="userName" type="text">
-       
+
     </mat-form-field>
-    {{registrationForm.get('userName')?.valid}}
+    <mat-form-field>
+        <mat-label>Topic</mat-label>
+        <mat-select multiple formControlName="topic">
+            <mat-option value="none">None</mat-option>
+            <mat-option value="react">React</mat-option>
+            <mat-option value="angular">Angular</mat-option>
+            <mat-option value="vue js">Vue js</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <!-- Auto Complete here -->
+    <mat-form-field>
+        <input type="text" matInput [matAutocomplete]="auto" formControlName="option">
+        <!-- This is input field and to show options for this filed..
+         i have created a template refererenc eon auto-compete and call in input field -->
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+    <br>
+    <!-- {{registrationForm.get('userName')?.valid}} -->
+     <mat-form-field>
+        <input matInput [matDatepicker]="myDatePicker" formControlName="date" [matDatepickerFilter]="dateFilter">
+        <!-- Here i repat same procedure....  -->
+        <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker ></mat-datepicker>
+     </mat-form-field>
+     <br>
+     <button mat-raised-button matTooltip="Welcome to Angular">Button</button>
+     <!-- It is Snack bar -->
+      <button mat-flat-button (click)="openSnackBar('items Delete','Dismiss')">Click to show SnackBar</button>
+      <!-- Open Dialog -->
+       <button mat-raised-button (click)="openDialog()">Open Dialog</button>
 </form>
 
